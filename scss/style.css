@@ -1,1 +1,654 @@
+/*Scss Document*/
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+/*
+Project Name: Ramen Creator #
+Description: Click through a Ramen Recipe
+Author: Megan McClish
+Version: 1.0
+License: 
 
+Tags: (optional)
+
+General comments (optional)
+
+Table of Contents in CSS
+1. Global
+2. Variables/ Mixins
+3. Links
+4. Headings
+5. Header
+6. Navigation
+7. Middle
+8. Forms
+9. Extras
+10. Footer
+*/
+/* 1. Global */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #F3C41C;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#jump-to-nav {
+  position: absolute;
+  overflow: hidden;
+  overflow-x: hidden;
+  left: -3px;
+  width: 1px;
+  height: 1px;
+}
+
+/* 2. Variables/ Mixins */
+/* 3. Links */
+.next {
+  font-size: 2em;
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  position: absolute;
+  z-index: 150;
+  left: 980px;
+  top: 600px;
+  cursor: pointer;
+}
+
+/* 4. Headings */
+/* 5. Header */
+/* 6. Navigation */
+#dotNav {
+  list-style: none;
+  text-decoration: none;
+  height: 200px;
+  width: 25px;
+  position: fixed;
+  right: 20px;
+  top: 30%;
+}
+
+#dotNav li {
+  position: relative;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.activeDot {
+  background-color: #121212;
+}
+
+.inactiveDot {
+  background-color: #fff;
+}
+
+/* 7. Pages */
+#mainContent {
+  /* background-image: url('../images/dots.jpg');*/
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+
+#actionBox {
+  position: relative;
+  margin: auto;
+  height: 600px;
+  max-width: 1100px;
+  z-index: 20;
+  overflow: hidden;
+}
+
+/*Page One*/
+#ramenBowl {
+  width: 50%;
+  position: absolute;
+  left: 600px;
+  top: -650px;
+  z-index: 100;
+}
+
+#titleIntro {
+  font-size: 8em;
+  color: #121212;
+  line-height: 1em;
+  font-family: 'Kalam', cursive;
+  text-align: center;
+  -webkit-transform: rotate(-0.02turn);
+          transform: rotate(-0.02turn);
+  width: 30%;
+  padding: 10%;
+  margin: 0px;
+  position: absolute;
+  top: -650px;
+  left: 5px;
+  z-index: 100;
+}
+
+/* Page Two */
+#instructionsTwo, #instructionsThree, #simmer, #instructionsFive, #instructionsSeven {
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+  right: -1000px;
+}
+
+#ginger {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+#gingerTag {
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+  top: 0px;
+  left: -600px;
+  -webkit-transform: rotate(-0.15turn);
+          transform: rotate(-0.15turn);
+}
+
+#choppedGinger {
+  position: absolute;
+  right: -600px;
+  z-index: 130;
+}
+
+#sesame {
+  position: absolute;
+  left: -600px;
+  z-index: 150;
+  width: 25%;
+  cursor: pointer;
+}
+
+#sesameSauce {
+  position: absolute;
+  right: -600px;
+  z-index: 110;
+}
+
+#garlic {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+#garlicTag {
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+  top: 0px;
+  left: -600px;
+  -webkit-transform: rotate(0.08turn);
+          transform: rotate(0.08turn);
+}
+
+#choppedGarlic {
+  position: absolute;
+  right: -600px;
+  z-index: 120;
+}
+
+#stove, #stoveTwo {
+  position: absolute;
+  width: 70%;
+  right: -1000px;
+  z-index: 100;
+}
+
+/* Third Page */
+#soySauce, #mirin, #sake, #dashi {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  z-index: 160;
+  cursor: pointer;
+}
+
+#soySauce_pan {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  z-index: 110;
+}
+
+#sakeSauce {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  z-index: 120;
+}
+
+#dashiSauce {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  z-index: 140;
+}
+
+#mirinSauce {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  right: -800px;
+  z-index: 130;
+}
+
+#stoveSaute {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  right: -1000px;
+  width: 70%;
+}
+
+/*Fourth Page*/
+#instructionsFour {
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  font-size: 6em;
+  width: 20%;
+}
+
+#spoon {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  z-index: 170;
+  cursor: pointer;
+}
+
+#stoveSimmer {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  right: -1000px;
+  width: 70%;
+}
+
+#brothStirred {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  z-index: 160;
+  width: 48%;
+}
+
+/* Fifth Page */
+#waterBowl {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  z-index: 120;
+  cursor: pointer;
+}
+
+#noodles {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  cursor: pointer;
+  z-index: 140;
+}
+
+#water {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  z-index: 110;
+  width: 45%;
+}
+
+#waterNoodles {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  z-index: 130;
+}
+
+#bubbles {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  z-index: 140;
+  height: 300px;
+  width: 300px;
+}
+
+/* Sixth Page */
+#instructionsSix {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+}
+
+#noodleBowl {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  z-index: 150;
+  cursor: pointer;
+}
+
+#brothBowl {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  z-index: 150;
+  cursor: pointer;
+}
+
+#broth {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  z-index: 120;
+  width: 33%;
+  right: -1100px;
+}
+
+#cookedNoodles {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  z-index: 130;
+  width: 37%;
+}
+
+#emptyBowl {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  right: -1100px;
+  width: 50%;
+}
+
+/* Page Seven */
+#instructionsSeven {
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+}
+
+#nori {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  z-index: 110;
+  cursor: pointer;
+}
+
+#noriTag {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+
+#lime {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  cursor: pointer;
+  z-index: 160;
+}
+
+#limeTag {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+
+#egg {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  cursor: pointer;
+  z-index: 180;
+}
+
+#eggTag {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+}
+
+#mushrooms {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  cursor: pointer;
+  z-index: 170;
+}
+
+#mushroomTag {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+#cilantro {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  cursor: pointer;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+  z-index: 170;
+}
+
+#cilantroTag {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+#maki {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  cursor: pointer;
+  -webkit-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+  z-index: 170;
+}
+
+#makiTag {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+  -webkit-transform: rotate(-42deg);
+          transform: rotate(-42deg);
+}
+
+#greenOnion {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  cursor: pointer;
+  z-index: 160;
+}
+
+#greenTag {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+
+#meat {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  cursor: pointer;
+  width: 25%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 160;
+}
+
+#meatTag {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+}
+
+#sesameSeeds {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  cursor: pointer;
+  z-index: 180;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+
+#sesameTag {
+  position: absolute;
+  left: -600px;
+  z-index: 100;
+  font-family: 'Kalam', cursive;
+  color: #121212;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  z-index: 180;
+}
+
+#finishedBowl {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  right: -1500px;
+  width: 50%;
+}
+
+#noodles_in_bowl {
+  position: absolute;
+  right: -600px;
+  z-index: 100;
+  width: 40%;
+  z-index: 150;
+}
+
+/* 8. Forms */
+/* 9. Extras */
+/* 10. Footer */
+/*# sourceMappingURL=style.css.map */

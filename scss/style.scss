@@ -1,0 +1,533 @@
+/*Scss Document*/
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+/*
+Project Name: Ramen Creator #
+Description: Click through a Ramen Recipe
+Author: Megan McClish
+Version: 1.0
+License: 
+
+Tags: (optional)
+
+General comments (optional)
+
+Table of Contents in CSS
+1. Global
+2. Variables/ Mixins
+3. Links
+4. Headings
+5. Header
+6. Navigation
+7. Middle
+8. Forms
+9. Extras
+10. Footer
+*/
+
+/* 1. Global */
+html,body  { 
+    margin: 0;
+    padding: 0;
+    background-color: #F3C41C;
+    box-sizing: border-box;
+    }
+
+.clearfix:after{
+    content:"";
+    display: table;
+    clear: both;
+    }
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#jump-to-nav { 
+	position: absolute;
+    overflow: hidden;
+    overflow-x: hidden;
+	left:-3px;
+	width: 1px;
+	height: 1px;
+}
+
+
+  /* 2. Variables/ Mixins */
+
+  $neutral: #F2F3ED;
+  $accent: #F3C41C;
+  $font: #121212;
+
+  @mixin font { 
+        font-family: 'Kalam', cursive;
+        color: $font;
+        font-size: 1.8em;
+        font-weight: 900;
+        position: absolute;
+        z-index: 100;
+        text-transform: uppercase;
+  }
+
+  @mixin hideLeft {
+      position: absolute;
+      left: -600px;
+      z-index: 100;
+  }
+
+  @mixin hideRight {
+    position: absolute;
+    right: -600px;
+    z-index: 100;
+  }
+  
+  /* 3. Links */
+
+  .next {
+      font-size: 2em;
+      font-family: 'Kalam', cursive;
+      color: $font;
+      position: absolute;
+      z-index: 150;
+      left: 980px;
+      top: 600px;
+      cursor: pointer;
+      
+  }
+
+  
+  /* 4. Headings */
+  
+  /* 5. Header */
+  
+  /* 6. Navigation */
+
+#dotNav {
+	list-style: none;
+    text-decoration: none;
+	height: 200px;
+	width: 25px;
+	position: fixed;
+	right: 20px;
+	top: 30%;
+}
+#dotNav li{
+	position: relative;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.activeDot {
+    background-color: $font;
+}
+.inactiveDot {
+    background-color: #fff;
+}
+  
+  /* 7. Pages */
+#mainContent {
+   /* background-image: url('../images/dots.jpg');*/
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+
+#actionBox {
+	position: relative;
+    margin: auto;
+    height: 600px;
+    max-width: 1100px;
+	z-index: 20;
+	overflow: hidden;
+}
+
+/*Page One*/
+
+#ramenBowl {
+    width: 50%;
+    position: absolute;
+    left: 600px;
+    top: -650px;
+    z-index: 100;
+}
+
+
+#titleIntro {
+    font-size: 8em;
+    color: $font;
+    line-height: 1em;
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    transform: rotate(-0.02turn);
+    width: 30%;
+    padding: 10%;
+    margin: 0px;
+    position: absolute;
+    top: -650px;
+    left: 5px;
+    z-index: 100;
+    
+}
+
+/* Page Two */
+
+#instructionsTwo {
+    @include font();
+    right: -1000px;
+}
+
+#ginger {
+    position: absolute;
+    left: -600px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#gingerTag {
+    @include font();
+    top: 0px;
+    left: -600px;
+    transform: rotate(-0.15turn);
+}
+
+#choppedGinger {
+    position: absolute;
+    right: -600px;
+    z-index: 130;
+}
+
+
+#sesame {
+    position: absolute;
+    left: -600px;
+    z-index: 150;
+    width: 25%;
+    cursor: pointer;
+}
+
+#sesameSauce {
+    position: absolute;
+    right: -600px;
+    z-index: 110;
+}
+
+
+#garlic {
+    position: absolute;
+    left: -600px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#garlicTag {
+    @include font();
+    top: 0px;
+    left: -600px;
+    transform: rotate(0.08turn);
+
+}
+
+#choppedGarlic {
+    position: absolute;
+    right: -600px;
+    z-index: 120;
+}
+
+#stove {
+    position: absolute;
+    width: 70%;
+    right: -1000px;
+    z-index: 100;
+}
+
+/* Third Page */
+
+#instructionsThree {
+    @extend #instructionsTwo;
+}
+
+#simmer {
+    @extend #instructionsTwo;
+}
+    
+#soySauce {
+    @include hideLeft();
+    z-index: 160;
+    cursor: pointer;
+
+}
+
+#mirin {
+    @extend #soySauce;
+
+}
+
+#sake {
+    @extend #soySauce;
+}
+
+#dashi {
+    @extend #soySauce;
+}
+
+#soySauce_pan {
+    @include hideRight();
+    z-index: 110;
+    
+}
+
+#sakeSauce {
+    @include hideRight();
+    z-index: 120;
+}
+
+#dashiSauce {
+    @include hideRight();
+    z-index: 140;
+}
+
+#mirinSauce {
+    @include hideRight();
+    right: -800px;
+    z-index: 130;
+}
+
+#stoveSaute {
+    @include hideRight();
+    right: -1000px;
+    width: 70%;
+}
+
+/*Fourth Page*/
+
+#instructionsFour {
+    @include font();
+    @include hideLeft();
+    font-size: 6em;
+    width: 20%;
+}
+
+#spoon {
+    @include hideLeft();
+    z-index: 170;
+    cursor: pointer;
+   
+}
+
+#stoveSimmer {
+    @include hideRight();
+    right: -1000px;
+    width: 70%;
+}
+
+#brothStirred {
+    @include hideRight();
+    z-index: 160;
+    width: 48%;
+}
+
+/* Fifth Page */
+
+#instructionsFive {
+    @extend #instructionsTwo;
+}
+
+#stoveTwo {
+    @extend #stove;
+}
+
+#waterBowl {
+    @include hideLeft();
+    z-index: 120;;
+    cursor: pointer;
+}
+
+#noodles {
+    @include hideLeft();
+    cursor: pointer;
+    z-index: 140;
+}
+
+#water {
+    @include hideRight();
+    z-index: 110;
+    width: 45%;
+}
+
+#waterNoodles {
+    @include hideRight();
+    z-index: 130;
+}
+
+#bubbles {
+    @include hideRight();
+    z-index: 140;
+    height: 300px;
+    width: 300px;
+}
+
+/* Sixth Page */
+
+#instructionsSix {
+    @include hideRight();
+    @include font();
+}
+
+#noodleBowl {
+    @include hideLeft();
+    z-index: 150;
+    cursor: pointer;
+}
+
+#brothBowl {
+    @include hideLeft();
+    z-index: 150;
+    cursor: pointer;
+}
+
+#broth {
+    @include hideRight();
+    z-index: 120;
+    width: 33%;
+    right: -1100px;
+}
+
+#cookedNoodles {
+    @include hideRight();
+    z-index: 130;
+    width: 37%;
+}
+
+#emptyBowl {
+    @include hideRight();
+    right: -1100px;
+    width: 50%;
+}
+
+/* Page Seven */
+#instructionsSeven {
+    @extend #instructionsTwo;
+    @include font();
+}
+
+#nori {
+ @include hideLeft();
+ z-index: 110;
+ cursor: pointer;
+ 
+}
+
+#noriTag {
+    @include hideLeft();
+    @include font();
+    transform: rotate(-35deg);
+}
+#lime {
+    @include hideLeft();
+    cursor: pointer;
+    z-index: 160;
+
+}
+#limeTag {
+    @include hideLeft();
+    @include font();
+    transform: rotate(50deg);
+}
+#egg {
+    @include hideLeft();
+    cursor: pointer;
+    z-index: 180;
+}
+#eggTag {
+    @include hideLeft();
+    @include font();
+}
+#mushrooms {
+    @include hideLeft();
+    cursor: pointer;
+    z-index: 170;
+}
+#mushroomTag {
+    @include hideLeft();
+    @include font();
+    transform: rotate(-30deg);
+}
+#cilantro {
+    @include hideLeft();
+    cursor: pointer;
+    transform: rotate(50deg);
+    z-index: 170;
+}
+#cilantroTag {
+    @include hideLeft();
+    @include font();
+    transform: rotate(40deg);
+}
+#maki {
+    @include hideLeft();
+    cursor: pointer;
+    transform: rotate(-50deg);
+    z-index: 170;
+}
+#makiTag {
+    @include hideLeft();
+    @include font();
+    transform: rotate(-42deg);
+}
+#greenOnion {
+    @include hideLeft();
+    cursor: pointer;
+    z-index: 160;
+}
+#greenTag {
+    @include hideLeft();
+    @include font();
+    transform: rotate(50deg);
+}
+#meat {
+    @include hideLeft();
+    cursor: pointer;
+    width: 25%;
+    transform: rotate(45deg);
+    z-index: 160;
+}
+#meatTag {
+    @include hideLeft();
+    @include font();
+}
+
+#sesameSeeds {
+    @include hideLeft();
+    cursor: pointer;
+    z-index: 180;
+    transform: rotate(50deg);
+}
+
+#sesameTag {
+    @include hideLeft();
+    @include font();
+    transform: rotate(-30deg);  
+    z-index: 180;
+}
+#finishedBowl {
+    @include hideRight(); 
+    right: -1500px;
+    width: 50%;
+}
+
+#noodles_in_bowl {
+    @include hideRight();
+    width: 40%;
+    z-index: 150;
+}
+
+  /* 8. Forms */
+  
+  /* 9. Extras */
+
+  /* 10. Footer */
